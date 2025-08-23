@@ -8,7 +8,10 @@ This project demonstrates a CI/CD pipeline where application code is automatical
 - Configurable CPU & Memory for Cloud Run service
 - Public accessibility (--allow-unauthenticated)
 ---
-
+```mermaid
+This project demonstrates a CI/CD pipeline where the **application frontend runs on Google Cloud Run** and the **backend runs on Google Kubernetes Engine (GKE)**. The code is automatically built into Docker images and deployed using **Google Cloud Build**, ensuring a seamless and automated deployment process.
+```
+---
 ## Architecture
 ```mermaid
 flowchart TD
