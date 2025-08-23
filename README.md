@@ -6,7 +6,7 @@ This project demonstrates a CI/CD pipeline where the frontend runs on Cloud Run 
 ```mermaid
 flowchart TD
     A[Source Code - GitHub/Git Repo] -->|Push| B[Cloud Build]
-    B -->|Build Docker Image| C[Artifact Registry / Container Registry]
+    B -->|Build Docker Image| C[Artifact Registry]
     C -->|Deploy| D[Cloud Run Service]
     D -->|Serve Traffic| E[Users]
 ```
