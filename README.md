@@ -2,11 +2,6 @@
 ## Project Description
 
 This project demonstrates a CI/CD pipeline where the frontend runs on Cloud Run and the backend runs on GKE. The code is automatically built into a Docker image and deployed using Google Cloud Build.
-### The pipeline ensures:
-- Automated build and deployment
-- Scalability (up to 10 instances)
-- Configurable CPU & Memory for Cloud Run service
-- Public accessibility (--allow-unauthenticated)
 ---
 
 ## Architecture
