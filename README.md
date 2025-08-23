@@ -1,19 +1,4 @@
 # Cloud Run Deployment via Cloud Build
-## Project Description  
-This project demonstrates a **CI/CD pipeline** where application code is automatically built into a **Docker image** and deployed to **Google Kubernetes Engine (GKE)**.  
-The pipeline ensures that every code change pushed to GitHub is tested, containerized, and deployed to a GKE cluster with zero manual intervention.  
-
-It also includes optimizations such as:  
-- ✅ Automated Docker builds  
-- ✅ GKE deployment with Kubernetes manifests  
-- ✅ Configurable environment variables  
-- ✅ Resource tuning & Ingress management  
-- ✅ Error handling, logging, and health checks 
----
-
-
-
-
 ## Project Description
 
 This project demonstrates a CI/CD pipeline where application code is automatically built into a Docker image and deployed to Google Cloud Run using Google Cloud Build.  
@@ -22,22 +7,7 @@ This project demonstrates a CI/CD pipeline where application code is automatical
 - Scalability (up to 10 instances)
 - Configurable CPU & Memory for Cloud Run service
 - Public accessibility (--allow-unauthenticated)
-
-
-
-## 🏗️ Architecture  
-
-```mermaid
-graph TD;
-    Dev[👨‍💻 Developer] -->|Push Code| GitHub[🐙 GitHub Repo]
-    GitHub -->|Trigger| Actions[⚡ GitHub Actions CI/CD]
-    Actions -->|Build & Push| Artifact[📦 Artifact Registry]
-    Actions -->|Deploy| GKE[GKE Cluster]
-    GKE -->|Ingress| User[🌍 End Users]
-```
 ---
-
-
 
 ## Architecture
 ```mermaid
@@ -48,6 +18,7 @@ flowchart TD
     D -->|Serve Traffic| E[Users]
 ```
 Cloud Build picks up changes → builds Docker image → pushes to Artifact Registry → deploys to Cloud Run.
+---
 
 ## Setup Instructions
 ### Prerequisites
@@ -82,6 +53,7 @@ Get the service URL:
 gcloud run services describe my-service --region us-central1 --format="value(status.url)"
 ```
 Open the URL in a browser
+---
 
 ## Cloud Build Config Explanation (`cloudbuild.yaml`)
 ```yaml
