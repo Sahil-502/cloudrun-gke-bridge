@@ -9,7 +9,8 @@ flowchart TD
     B -->|Build Docker Image| C[Artifact Registry]
     C -->|Deploy| D[Cloud Run Service]
     D -->|Call GKE Backend| E[Responce]
-    E -->|Serve Traffic| F[Users]
+    E -->|Deploy| F[Cloud Run Service]
+    F -->|Serve Traffic| G[Users]
 ```
 
 Cloud Build picks up changes → builds Docker image → pushes to Artifact Registry → deploys to Cloud Run.
