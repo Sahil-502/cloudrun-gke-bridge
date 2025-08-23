@@ -8,8 +8,8 @@ flowchart TD
     A[Source Code - GitHub/Git Repo] -->|Push| B[Cloud Build]
     B -->|Build Docker Image| C[Artifact Registry]
     C -->|Deploy| D[Cloud Run Service]
-    D -->|Call GKE Backend| E[Responce]
-    E -->|Deploy| F[Cloud Run Service]
+    D -->|Call GKE Backend| E[Process Request]
+    E -->|Response| F[Cloud Run Service]
     F -->|Serve Traffic| G[Users]
 ```
 
