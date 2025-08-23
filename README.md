@@ -1,6 +1,5 @@
 # Cloud Run Deployment via Cloud Build
-## Project Description
-
+## Project Description  
 This project demonstrates a CI/CD pipeline where the frontend runs on Cloud Run and the backend runs on GKE. The code is automatically built into a Docker image and deployed using Google Cloud Build.
 ---
 
@@ -12,6 +11,7 @@ flowchart TD
     C -->|Deploy| D[Cloud Run Service]
     D -->|Serve Traffic| E[Users]
 ```
+
 Cloud Build picks up changes → builds Docker image → pushes to Artifact Registry → deploys to Cloud Run.
 ---
 
